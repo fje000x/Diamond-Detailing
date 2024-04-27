@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%; /* Ensure the html element takes up full height */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack flex items vertically */
+    min-height: 100%; /* Use min-height to ensure at least full viewport height */
+    margin: 0;
+}
+
+/* Site Content Styles */
+.site-content {
+    flex: 1; /* Allows the site content to expand to fill available space */
+    /* Ensure that there's a padding-bottom equivalent to the footer's height
+    to prevent content from being hidden behind the footer */
+}
+
+/* Navbar Styles */
+.navbar {
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+}
+.navbar-brand {
+    font-size: 1.5rem;
+    color: whitesmoke; /* Red color from the business card */
+    font-family: monospace;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.nav-link {
+    background-color: transparent;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s;
+    color:whitesmoke;
+    font-family: monospace;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border:none;
+    
+}
+
+.hamburger-line {
+    background-color: red; /* This should be background-color, not color */
+    height: 2px;
+    width: 25px;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%; /* Ensure footer is full width */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: white;
+    padding-top:1em;
+}
+
+.footer-services span {
+    display: inline-block;
+    margin: 0 5px;
+    color: red; /* Red color from the business card */
+}
+
+
+.footer-services{
+    text-align: center;
+}
+.footer-services h2{
+    font-family: monospace;
+}
+
+/* Responsive footer services */
+@media (max-width: 768px) {
+    .footer-services span {
+        display: block; /* Stack the services on small screens */
+        margin: 5px 0;
+    }
+    #car-model-container {
+        max-height: 70vh; /* Adjust the value as needed */
+        overflow: auto; /* Add scrollbars if the content overflows */
+    }
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed; /* Positioned relative to the viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full viewport height */
+        background: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+        transition: transform 0.3s ease;
+        transform: translateY(-100%); /* Slide down effect */
+        
+    }
+
+    .navbar-links.active {
+        transform: translateY(0); /* Slide in menu */
+        display: flex; /* Display flex to center the links */
+    }
+
+    .nav-link {
+        margin: 1em 0;
+        color: white; /* Ensure the links are visible */
+        font-size: 1.5rem;
+        
+    }
+}
+
+/* Business Info Styles */
+.business-info {
+    padding: 2em;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+.business-info h2 {
+    color: red;
+    margin-bottom: 1em;
+    font-family: Monospace;
+}
+
+.business-info p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1em;
+}
+
+.business-info em {
+    display: block;
+    margin-top: 2em;
+    font-style: italic;
+    color: #999;
+}

@@ -14,6 +14,7 @@ body {
     flex-direction: column; /* Stack flex items vertically */
     min-height: 100%; /* Use min-height to ensure at least full viewport height */
     margin: 0;
+  
 }
 
 /* Site Content Styles */
@@ -26,7 +27,7 @@ body {
 /* Navbar Styles */
 .navbar {
     background: black;
-    color: white;
+    color: whitesmoke;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,7 +45,9 @@ body {
 .navbar-links {
     display: flex;
 }
-
+.navbar-links a {
+    font-size: 2em;
+}
 .nav-link {
     background-color: transparent;
     text-decoration: none;
@@ -52,6 +55,7 @@ body {
     transition: color 0.3s;
     color:whitesmoke;
     font-family: monospace;
+    
 }
 
 .nav-link:hover {
@@ -76,15 +80,15 @@ body {
 
 .footer {
     background-color: black;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 20px 0;
-    width: 100%; /* Ensure footer is full width */
+    width: 100vw; /* Ensure footer is full width */
 }
 
 .footer-content p {
     margin: 5px 0;
-    color: white;
+    color: whitesmoke;
     padding-top:1em;
 }
 
@@ -97,11 +101,27 @@ body {
 
 .footer-services{
     text-align: center;
+    padding-bottom: 2em;
 }
-.footer-services h2{
+footer h2{
     font-family: monospace;
+    padding-bottom: 1em;
+}
+#number{
+    text-decoration: none;
+    margin-left: 1em;
+}
+.number-flex{
+display:flex;
+align-items: center;
+justify-content: center;
+padding-bottom: 5em;
 }
 
+.end{
+    border-top: 1px solid whitesmoke;
+    padding-top: 3em;
+}
 /* Responsive footer services */
 @media (max-width: 768px) {
     .footer-services span {
@@ -141,7 +161,7 @@ body {
 
     .nav-link {
         margin: 1em 0;
-        color: white; /* Ensure the links are visible */
+        color: whitesmoke; /* Ensure the links are visible */
         font-size: 1.5rem;
         
     }
@@ -152,6 +172,7 @@ body {
     padding: 2em;
     background-color: whitesmoke;
     text-align: center;
+    width: 100vw;
 }
 
 .business-info h2 {
@@ -164,6 +185,7 @@ body {
     color: #666;
     line-height: 1.6;
     margin-bottom: 1em;
+
 }
 
 .business-info em {
@@ -172,3 +194,6 @@ body {
     font-style: italic;
     color: #999;
 }
+
+
+

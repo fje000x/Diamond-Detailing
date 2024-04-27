@@ -94,3 +94,22 @@ window.addEventListener('touchend', function () {
     allowOrbitControls = true;
     controls.enabled = allowOrbitControls;
 });
+
+
+let slideIndex = 0;
+
+function moveSlide(step) {
+    const slides = document.querySelectorAll('.carousel-slide .slide');
+    slideIndex += step;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    } else if (slideIndex < 0) {
+        slideIndex = slides.length - 1;
+    }
+    const slideWidth = slides[0].clientWidth;
+    document.querySelector('.carousel-slide').style.transform = `translateX(${-slideIndex * slideWidth}px)`;
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    moveSlide(0); // Initialize the first slide position
+});

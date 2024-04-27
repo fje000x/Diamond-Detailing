@@ -1,0 +1,166 @@
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns in larger screens */
+    grid-gap: 16px; /* Space between images */
+    padding: 20px; /* Padding around the grid */
+}
+
+.image-grid img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners for aesthetics */
+}
+#gallery{
+    padding-top:6em;
+    text-align: center;
+    font-family: monospace;
+}
+
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 column in mobile screens */
+    }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* Stack flex items vertically */
+    min-height: 100%; /* Use min-height to ensure at least full viewport height */
+    margin: 0;
+    font-family: monospace;
+}
+.footer-content p {
+    font-family: Arial, sans-serif;
+}
+/* Navbar Styles */
+.navbar {
+    background: black;
+    color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top of the viewport */
+    width: 100%; /* Ensure it spans the full width */
+    
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-family: monospace;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+.navbar-links a {
+    font-size: 2em;
+}
+
+.nav-link {
+    background-color: transparent;
+    text-decoration: none;
+    margin-left: 1em;
+    transition: color 0.3s;
+    color: whitesmoke;
+    font-family: monospace;
+    font-size: 2em;
+}
+
+.nav-link:hover {
+    color: red;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.hamburger-line {
+    background-color: red;
+    height: 2px;
+    width: 25px;
+    margin: 5px 0;
+    transition: all 0.3s;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: black;
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0;
+    width: 100vw; /* Ensure footer is full width */
+}
+
+.footer-content p {
+    margin: 5px 0;
+    color: whitesmoke;
+    padding-top: 1em;
+}
+
+.footer-services {
+    text-align: center;
+}
+
+ footer h2 {
+    font-family: monospace;
+    color:red;
+}
+
+.footer-services span {
+    display: inline-block;
+    margin: 0 5px;
+    color: red;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .navbar-links.active {
+        transform: translateY(0);
+        display: flex;
+    }
+
+    .nav-link {
+        margin: 1em 0;
+        color: whitesmoke;
+        font-size: 1.5rem;
+    }
+    
+    .footer-services span {
+        display: block; /* Stack the services on small screens */
+        margin: 5px 0;
+    }
+}

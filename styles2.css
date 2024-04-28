@@ -64,9 +64,7 @@ body {
     display: flex;
 }
 
-.navbar-links a {
-    font-size: 2em;
-}
+
 
 .nav-link {
     background-color: transparent;
@@ -75,7 +73,7 @@ body {
     transition: color 0.3s;
     color: whitesmoke;
     font-family: monospace;
-    font-size: 2em;
+    
 }
 
 .nav-link:hover {
@@ -99,32 +97,37 @@ body {
 
 /* Footer Styles */
 .footer {
-    background-color: black;
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px 0;
-    width: 100vw; /* Ensure footer is full width */
+    background-color: #202020; /* Dark grey background */
+    color: #fff; /* White text color */
+    text-align: center; /* Centering the text */
+    padding: 20px; /* Padding around the content */
+    font-family: 'Arial', sans-serif; /* Modern sans-serif font */
 }
 
-.footer-content p {
-    margin: 5px 0;
-    color: whitesmoke;
-    padding-top: 1em;
+.footer-content {
+    max-width: 800px; /* Limiting the width for better readability */
+    margin: 0 auto; /* Centering the content horizontally */
 }
 
-.footer-services {
-    text-align: center;
+.footer h2 {
+    font-size: 24px; /* Slightly larger font size for the heading */
+    margin-bottom: 10px; /* Space between the heading and the quote */
+    font-weight: normal; /* Normal weight to reduce boldness */
+    color: #FF0000; /* Bright red color */
+    text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000; /* Glowing effect */
 }
 
- footer h2 {
-    font-family: monospace;
-    color:red;
+.footer p {
+    font-size: 16px; /* Adequate font size for readability */
+    margin-bottom: 5px; /* Space between the paragraphs */
+    line-height: 1.5; /* Line height for better readability */
+    opacity: 0.9; /* Slightly reduced opacity for aesthetic effect */
 }
 
-.footer-services span {
-    display: inline-block;
-    margin: 0 5px;
-    color: red;
+.footer p:last-child {
+    font-size: 14px; /* Smaller font size for the copyright statement */
+    margin-top: 10px; /* Additional space before the copyright */
+    opacity: 0.75; /* More reduced opacity to differentiate it */
 }
 
 /* Responsive Adjustments */
@@ -146,6 +149,7 @@ body {
         background: rgba(0, 0, 0, 0.9);
         transform: translateY(-100%);
         transition: transform 0.3s ease;
+        
     }
 
     .navbar-links.active {
@@ -156,7 +160,7 @@ body {
     .nav-link {
         margin: 1em 0;
         color: whitesmoke;
-        font-size: 1.5rem;
+        font-size: 2em;
     }
     
     .footer-services span {

@@ -45,8 +45,8 @@ body {
 .navbar-links {
     display: flex;
 }
-.navbar-links a {
-    font-size: 2em;
+.navbar-link a {
+    font-size: 7em;
 }
 .nav-link {
     background-color: transparent;
@@ -78,49 +78,54 @@ body {
     transition: all 0.3s;
 }
 
-.footer {
-    background-color: black;
-    color: whitesmoke;
+footer {
+    background-color: #333; /* Dark background for contrast */
+    color: white;
     text-align: center;
-    padding: 20px 0;
-    width: 100vw; /* Ensure footer is full width */
+    padding: 20px 10px;
+    width:100vw;
 }
 
-.footer-content p {
-    margin: 5px 0;
-    color: whitesmoke;
-    padding-top:1em;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Wrap content on smaller screens */
 }
 
-.footer-services span {
-    display: inline-block;
-    margin: 0 5px;
-    color: red; /* Red color from the business card */
+.footer-section {
+    margin: 10px;
+    flex: 1; /* Each section takes equal width */
 }
 
+.footer-locations {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+}
 
-.footer-services{
-    text-align: center;
-    padding-bottom: 2em;
+.footer-locations li {
+    padding: 5px 0; /* Spacing between location items */
 }
-footer h2{
-    font-family: monospace;
-    padding-bottom: 1em;
-}
-#number{
+
+.contact-info p {
+    margin: 5px 0; /* Vertical spacing for readability */
     text-decoration: none;
-    margin-left: 1em;
+    list-style: none;
 }
-.number-flex{
-display:flex;
-align-items: center;
-justify-content: center;
-padding-bottom: 5em;
+.contact-info  {
+    color:red ;
+    
+    
 }
 
-.end{
-    border-top: 1px solid whitesmoke;
-    padding-top: 3em;
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+    
+    .footer-section {
+        margin: 10px 0; /* Adjust margin for stacked layout */
+    }
 }
 /* Responsive footer services */
 @media (max-width: 768px) {
@@ -162,7 +167,7 @@ padding-bottom: 5em;
     .nav-link {
         margin: 1em 0;
         color: whitesmoke; /* Ensure the links are visible */
-        font-size: 1.5rem;
+        font-size: 2em;
         
     }
 }
